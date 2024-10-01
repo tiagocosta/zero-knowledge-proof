@@ -7,6 +7,17 @@ edition = "2021"
 rand = "0.8.5"
 num-bigint = { version = "0.4", features = ["rand"] }
 hex = "0.4.3"
+tonic = "0.12.3"
+prost = "0.13.3"
+tokio = { version = "1.40.0", features = ["macros", "rt-multi-thread"] } # async rus runtime
 
 [build-dependencies]
 tonic-build = "0.12.3"
+
+[[bin]]
+name = "server"
+path = "./src/server.rs"
+
+[[bin]]
+name = "client"
+path = "./src/client.rs"
